@@ -5,7 +5,15 @@
             <slot />
         </div>
 
-        <navigation v-bind="{offset, gap, itemsNumber, viewWidth, useKeyboard}" @scroll="o => this.offset = o"/>
+        <navigation
+            v-bind="{offset, gap, itemsNumber, viewWidth, useKeyboard}"
+            @scroll="o => this.offset = o">
+
+            <slot name="left" slot="left"></slot>
+            <slot name="right" slot="right"></slot>
+
+        </navigation>
+
     </div>
 
 

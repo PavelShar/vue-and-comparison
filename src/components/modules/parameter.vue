@@ -4,10 +4,11 @@
 
         <parameter :title="title" :hasHint="hasHint" @tooltip="tooltip = !tooltip" />
 
-        <tooltip slot="tooltip" :style="{marginLeft: '25px'}" v-model="tooltip" v-if="tooltip && hasHint">
+
+        <!--<tooltip slot="tooltip" :style="{marginLeft: '25px'}" v-model="tooltip" v-if="tooltip && hasHint">
             <div slot="title">{{title}}</div>
             <div slot="text" v-html="hintText"></div>
-        </tooltip>
+        </tooltip>-->
 
         <div class="values" :style="{left: - offset + 'px'}">
             <slot/>
@@ -23,13 +24,13 @@
     import Parameter from './../base/parameter.vue'
 
     import slider from './../../mixins/slider'
-    import {Tooltip} from '../../../popups'
+
 
     export default {
 
         props,
         mixins: [slider],
-        components: {Parameter, Tooltip},
+        components: {Parameter},
 
         data() {
             return {

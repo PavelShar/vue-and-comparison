@@ -3,14 +3,23 @@
     <!-- Navigation -->
     <div class="vue-comparison__navigation" v-if="showNavigation">
 
-        <div class="vue-comparison__navigation__arrow" :class="{disabled: !scrollableLeft}" @click="scroll('left')">
-            <i class="fa fa-chevron-left"></i>
+        <div @click="scroll('left')" class="vue-comparison__navigation__arrow">
+            <slot name="left" v-bind="{disabled: !scrollableLeft}">
+                <div :class="{disabled: !scrollableLeft}" >
+                    <span class="chevron left"></span>
+                </div>
+            </slot>
         </div>
 
 
-        <div class="vue-comparison__navigation__arrow" :class="{disabled: !scrollableRight}" @click="scroll('right')">
-            <i class="fa fa-chevron-right"></i>
+        <div @click="scroll('right')" class="vue-comparison__navigation__arrow">
+            <slot name="right" v-bind="{disabled: !scrollableRight}">
+                <div  :class="{disabled: !scrollableRight}" >
+                    <span class="chevron right"></span>
+                </div>
+            </slot>
         </div>
+
     </div>
 
 </template>
@@ -56,6 +65,8 @@
             /**
              * Should show navigation arrows
              * Detect max width of comparison items
+             *
+             * @returns {boolean}
              */
             showNavigation() {
                 return (this.itemsNumber * this.gap) >= this.viewWidth;
@@ -64,14 +75,17 @@
 
             /**
              * Check if area can be scrolled left
+             *
              * @returns {boolean}
              */
             scrollableLeft() {
                 return this.offset > 0;
             },
 
+
             /**
              * Check if area can be scrolled right
+             *
              * @returns {boolean}
              */
             scrollableRight() {
@@ -150,32 +164,67 @@
             display: flex;
             margin-bottom: 5px;
 
+
             &__arrow {
                 flex: 1;
                 width: 100%;
-                text-align: center;
-                padding: 3px;
-                font-size: 11px;
-                background: #fbfbfb;
-                color: #a8a8a8;
-                cursor: pointer;
-                transition: .2s ease;
-                border-top: 1px solid #efefef;
-                border-right: 1px solid #efefef;
 
-                &:last-child {
-                    border-right: 0;
+                > div {
+
+                    text-align: center;
+                    padding: 3px;
+                    font-size: 11px;
+                    background: #fbfbfb;
+                    color: #a8a8a8;
+                    cursor: pointer;
+                    transition: .2s ease;
+                    border-top: 1px solid #efefef;
+                    border-right: 1px solid #efefef;
+
+                    .chevron {
+                        &::before {
+                            border-style: solid;
+                            border-width: 0.25em 0.25em 0 0;
+                            content: '';
+                            display: inline-block;
+                            height: 0.45em;
+                            left: 0.15em;
+                            position: relative;
+                            top: 0.15em;
+                            transform: rotate(-45deg);
+                            vertical-align: top;
+                            width: 0.45em;
+                        }
+
+                        &.left:before {
+                            left: 0.25em;
+                            transform: rotate(-135deg);
+                        }
+
+                        &.right:before {
+                            left: 0;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    &:last-child {
+                        border-right: 0;
+                    }
+
+                    &:hover {
+                        background: darken(#fbfbfb, 2);
+                    }
+
+                    &.disabled {
+                        background: #f7f7f7;
+                        color: #eaeaea;
+                        cursor: not-allowed;
+                    }
                 }
 
-                &:hover {
-                    background: darken(#fbfbfb, 2);
-                }
 
-                &.disabled {
-                    background: #f7f7f7;
-                    color: #eaeaea;
-                    cursor: not-allowed;
-                }
+
+
             }
         }
     }

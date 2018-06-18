@@ -1,11 +1,11 @@
 <template>
-    <div class="compare__group">
+    <div class="vue-compare__group">
 
         <!-- Heading -->
         <heading v-model="visible" v-bind="$props" />
 
         <!-- Parameters -->
-        <transition name="parameters">
+        <transition name="fade">
             <div class="parameters" v-show="visible">
                 <slot/>
             </div>
@@ -19,13 +19,13 @@
 
 
     import Heading from './../base/heading.vue'
-    import HeadingProps from './../props/heading'
 
+    import props from './../props/heading'
     import slider from './../../mixins/slider'
 
-    export default {
 
-        props: Object.assign({}, HeadingProps),
+    export default {
+        props,
         mixins: [slider],
         components: {Heading},
 
@@ -40,20 +40,19 @@
 
 <style scoped lang="scss">
 
-    .compare__group {
+    .vue-compare__group {
 
         &:last-child {
             padding-bottom: 30px;
         }
 
-        /* Transition */
-        .parameters-enter-active,
-        .parameters-leave-active {
+        .fade-enter-active,
+        .fade-leave-active {
             transition: all .2s ease-in-out;
         }
 
-        .parameters-enter,
-        .parameters-leave-to{
+        .fade-enter,
+        .fade-leave-to{
             opacity: 0;
         }
 

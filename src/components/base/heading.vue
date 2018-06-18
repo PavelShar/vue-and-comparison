@@ -1,14 +1,14 @@
 <template>
 
-    <div class="heading" v-if="heading" @click="collapsable ? $emit('input', !value) : null">
+    <div class="heading" v-if="heading" @click="collapsible ? $emit('input', !value) : null">
 
         <div class="title">{{heading}}</div>
-        <div class="chevron" v-if="collapsable">
+        <div class="chevron" v-if="collapsible">
             <i class="fa" :class="{'fa-chevron-up': value, 'fa-chevron-down': !value}"></i>
         </div>
 
     </div>
-    
+
 </template>
 
 <script>

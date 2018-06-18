@@ -1,8 +1,8 @@
 export default [
 
     {
-        "title": "JhonDeere 8320R 62\u0420\u041a0755",
-        "subtitle": "62\u0420\u041a0755",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 0,
@@ -143,8 +143,8 @@ export default [
         }
     },
     {
-        "title": "TOYOTA HILUX 2,8",
-        "subtitle": "\u041d261\u0421\u041c46",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 0,
@@ -266,8 +266,8 @@ export default [
         }
     },
     {
-        "title": "\u0410\u0432\u0442\u043e\u0442\u043e\u043f\u043b\u0438\u0432\u043e\u0437\u0430\u043f\u0440\u0430\u0432\u0449\u0438\u043a 473878",
-        "subtitle": "\u041a294\u0415\u042246",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 0,
@@ -389,8 +389,8 @@ export default [
         }
     },
     {
-        "title": "\u0413\u0410\u0417 3110",
-        "subtitle": "\u041a151\u041c\u041d46",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 0,
@@ -512,8 +512,8 @@ export default [
         }
     },
     {
-        "title": "\u0413\u0430\u0437 - 3221 (\u0413\u0430\u0437\u0435\u043b\u044c)",
-        "subtitle": "\u041d841\u041d\u042346",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 73.4,
@@ -635,8 +635,8 @@ export default [
         }
     },
     {
-        "title": "\u0417\u0418\u041b \u0421\u0410\u0410\u04174546",
-        "subtitle": "\u041a718\u0415\u041c46",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 8.11,
@@ -758,8 +758,8 @@ export default [
         }
     },
     {
-        "title": "\u041a\u0410\u041c\u0410\u0417 552900",
-        "subtitle": "\u041d983\u041d\u042346",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 49.07,
@@ -881,8 +881,8 @@ export default [
         }
     },
     {
-        "title": "\u041a\u0410\u041c\u0410\u0417 552900",
-        "subtitle": "\u041d985\u041d\u042346",
+        "title": "Элемент",
+        "subtitle": "Эелемент",
         "parameters": {
             "usage": {
                 "move": 103.69,

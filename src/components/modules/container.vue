@@ -44,7 +44,6 @@
             },
 
 
-
             /**
              * Get real item width
              *
@@ -66,10 +65,29 @@
 <style scoped lang="scss">
 
     .vue-comparison {
+        height: 100%;
+        overflow-y: hidden;
+
         &__body {
+            height: 100%;
+            overflow-y: auto;
             background: white;
             overflow-x: hidden;
         }
     }
+
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #aeb5bb;
+        border: 1px solid transparent;
+        border-radius: 1px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+        border-radius: 1px;
+    }
+
 
 </style>

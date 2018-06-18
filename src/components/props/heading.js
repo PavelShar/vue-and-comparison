@@ -5,7 +5,7 @@ export default {
         default: null
     },
 
-    collapsable: {
+    collapsible: {
         type: Boolean,
         default: true
     },
