@@ -1,11 +1,13 @@
 {
   "name": "vue-and-comparison",
   "version": "0.1.0",
-  "private": true,
+  "description": "Sliding comparison table built for Vue",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --target lib --name vue-and-comparison ./src/index.js",
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "vue": "^2.5.17"
@@ -16,6 +18,7 @@
     "@vue/cli-service": "^3.0.4",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "vuepress": "^0.14.4"
   }
 }
