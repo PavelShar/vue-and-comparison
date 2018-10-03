@@ -1,16 +1,20 @@
-import Container from './components/modules/container.vue'
-import Header from './components/modules/header.vue'
-import Item from './components/modules/item.vue'
-import Group from './components/modules/group.vue'
+import Comparison from './components/comparison'
 
-import Parameter from './components/modules/parameter.vue'
-import Value from './components/modules/value.vue'
+import CContainer from './components/modules/container.vue'
+import CHeader from './components/modules/header.vue'
+import CItem from './components/modules/item.vue'
+import CGroup from './components/modules/group.vue'
+
+import CParameter from './components/modules/parameter.vue'
+import CValue from './components/modules/value.vue'
+
+export default Comparison
 
 export {
-    Container,
-    Header,
-    Item,
-    Group,
-    Parameter,
-    Value,
+    CContainer,
+    CHeader,
+    CItem,
+    CGroup,
+    CParameter,
+    CValue,
 }
